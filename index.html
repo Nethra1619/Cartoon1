@@ -17,8 +17,14 @@
     <script>
         const phrases = ["Hello! I'm your chatty girl.", "Nice to meet you!", "What's up?", "Let's talk!", "You're amazing!"];
         let index = 0;
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }
         setInterval(() => {
-            document.getElementById("speechBubble").textContent = phrases[index];
+            const currentPhrase = phrases[index];
+            document.getElementById("speechBubble").textContent = currentPhrase;
+            speak(currentPhrase);
             index = (index + 1) % phrases.length;
         }, 2000);
     </script>
