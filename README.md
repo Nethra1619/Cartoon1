@@ -4,7 +4,7 @@ This repository contains the source code for a simple website featuring a cartoo
 
 ## Live Demo
 
-Check out the live demo [here](https://nethra1619.github.io/Cartoon/).
+Check out the live demo [here](https://nethra1619.github.io/Cartoon1/).
 
 ## Files
 
@@ -15,11 +15,11 @@ Check out the live demo [here](https://nethra1619.github.io/Cartoon/).
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/nethra1619/Cartoon.git
+    git clone https://github.com/nethra1619/Cartoon1.git
     ```
 2. **Navigate to the project directory:**
     ```bash
-    cd Cartoon
+    cd Cartoon1
     ```
 3. **Open `index.html` in your browser:**
     ```bash
