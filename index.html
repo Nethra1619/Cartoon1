@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatty Girl</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .character { width: 200px; height: auto; }
+        .speech { border: 2px solid black; border-radius: 10px; padding: 10px; display: inline-block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Your Chatty Girl</h1>
+    <img src="IMG-20241002-WA0033.jpg" alt="Girl" class="character">
+    <div class="speech" id="speechBubble">Hello! I'm your chatty girl.</div>
+    <script>
+        const phrases = ["Hello! I'm your chatty girl.", "Nice to meet you!", "What's up?", "Let's talk!", "You're amazing!"];
+        let index = 0;
+        setInterval(() => {
+            document.getElementById("speechBubble").textContent = phrases[index];
+            index = (index + 1) % phrases.length;
+        }, 2000);
+    </script>
+</body>
+</html>
