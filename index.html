@@ -13,20 +13,21 @@
 <body>
     <h1>Your Chatty Girl</h1>
     <img src="IMG-20241002-WA0033.jpg" alt="Girl" class="character">
-    <div class="speech" id="speechBubble">Hello! I'm your chatty girl.</div>
+    <div class="speech" id="speechBubble"></div>
     <script>
-        const phrases = ["Hello! I'm your chatty girl.", "Nice to meet you!", "What's up?", "Let's talk!", "You're amazing!"," Hey dear, You are so beautiful, incredibly beautiful. There’s no one like you in my world; you’re a gem. There's nothing you can't do. In your life, whether I’m there or not, my memories will always be with you. I will be your best friend forever.If anyone makes you cry, remember I’m here, and we’ll take care of it together. You know well that there’s nothing better in this world than you, and you can do anything. They may leave saying things, but I know how you are.Your life is definitely going to be amazing. I’ll be a part of it. I might not like everything you do, but I’ll never leave you. If you don’t like something I did, I’m sorry. I love you a lot."];
-        let index = 0;
+        const message = `Hey dear,
+
+You are so beautiful, incredibly beautiful. There’s no one like you in my world; you’re a gem. There's nothing you can't do. In your life, whether I’m there or not, my memories will always be with you. I will be your best friend forever. If anyone makes you cry, remember I’m here, and we’ll take care of it together. You know well that there’s nothing better in this world than you, and you can do anything. They may leave saying things, but I know how you are.
+Your life is definitely going to be amazing. I’ll be a part of it. I might not like everything you do, but I’ll never leave you. If you don’t like something I did, I’m sorry. I love you a lot.`;
+        
         function speak(text) {
             const utterance = new SpeechSynthesisUtterance(text);
             window.speechSynthesis.speak(utterance);
         }
-        setInterval(() => {
-            const currentPhrase = phrases[index];
-            document.getElementById("speechBubble").textContent = currentPhrase;
-            speak(currentPhrase);
-            index = (index + 1) % phrases.length;
-        }, 2000);
+        window.onload = () => {
+            document.getElementById("speechBubble").textContent = message;
+            speak(message);
+        };
     </script>
 </body>
 </html>
